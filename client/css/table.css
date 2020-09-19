@@ -32,7 +32,14 @@ table{
 .cell{
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 240px;
+    
+}
+.cell:nth-child(1){
+    width: 600px;
+}
+.cell:nth-child(2){
+    display: flex;
+    justify-content: center;
 }
 thead .cell{
      color: #ffffff;
@@ -43,7 +50,11 @@ tbody .row{
     color: #666666;
 }
 tbody .cell{
-    font-size: 18px;
+    font-size: 25px;
     padding-left: 10px;  
+}
+.checkmark{
+    width: 25px;
+    height: 25px;
 }
 
