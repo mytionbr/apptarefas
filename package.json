@@ -1,0 +1,24 @@
+{
+  "name": "apptodolist",
+  "version": "1.0.0",
+  "description": "a to-do list application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mytionbr/apptarefas.git"
+  },
+  "author": "Matheus Sousa de Jesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mytionbr/apptarefas/issues"
+  },
+  "homepage": "https://github.com/mytionbr/apptarefas#readme"
+}

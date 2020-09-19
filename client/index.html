@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <title>To-do list</title>
 </head>
+
 <body>
-    <h1>To-do list</h1>
+
+    <header class="navbar">
+        <div class="container-navbar">
+            <div class="logo">
+                <h1>My tasks</h1>
+            </div>
+            <div class="menu">
+                <button>
+                    add task
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="general-container">
+            <div class="table-container">
+                <div class="wrap-table">
+                    <div class="table">
+                        <table >
+                            <thead class="table-header">
+                                <tr class='row'>
+                                    <th class='cell'>Title</th>
+                                    <th class='cell'>Date</th>
+                                    <th class='cell'>Type</th>
+                                    <th class='cell'>Done</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class='row'>
+                                    <td class='cell'>N/A</td>
+                                    <td class='cell'>N/A</td>
+                                    <td class='cell'>N/A</td>
+                                    <td class='cell'>N/A</td>
+                                   
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

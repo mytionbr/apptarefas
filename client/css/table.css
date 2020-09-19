@@ -1,0 +1,49 @@
+.table-container{
+    width: 100%;
+    height: 88vh;
+    background: #05F29B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:30px 0px;
+    
+}
+.wrap-table{
+    width: 960px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table{
+    width: 100%;
+    margin: 0;
+}
+table{
+    width: 100%;
+}
+
+.table-header{
+    background-color: #8245BF;
+}
+.row{
+    width: 100%;
+    line-height: 1.2;
+}
+.cell{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 240px;
+}
+thead .cell{
+     color: #ffffff;
+     font-size: 25px;  
+}
+tbody .row{
+    background-color: #ffffff;
+    color: #666666;
+}
+tbody .cell{
+    font-size: 18px;
+    padding-left: 10px;  
+}
+
