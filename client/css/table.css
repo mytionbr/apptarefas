@@ -57,4 +57,13 @@ tbody .cell{
     width: 25px;
     height: 25px;
 }
-
+tbody .cell a{
+    text-decoration: none;
+    color: #666666;
+}
+tbody .cell a:hover{
+    text-decoration: none;
+    color: #05F29B;
+    text-decoration: underline;
+    font-weight: bold;
+}
