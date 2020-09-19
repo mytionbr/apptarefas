@@ -48,10 +48,12 @@ thead .cell{
 tbody .row{
     background-color: #ffffff;
     color: #666666;
+    transition: all 1s;
 }
 tbody .cell{
     font-size: 25px;
     padding-left: 10px;  
+   
 }
 .checkmark{
     width: 25px;
@@ -63,7 +65,10 @@ tbody .cell a{
 }
 tbody .cell a:hover{
     text-decoration: none;
-    color: #05F29B;
+    color: #6F04D9;
     text-decoration: underline;
     font-weight: bold;
+}
+tbody .row:hover{
+    background-color: #dad4d4;
 }
