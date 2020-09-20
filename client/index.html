@@ -52,6 +52,17 @@
             </div>
         </div>
     </main>
+    <script src="js/app/controllers/TaskController.js"></script>
+    <script src="js/app/helpers/IDManager.js"></script>
+    <script src="js/app/models/Task.js"></script>
+    <script src="js/app/models/TaskList.js"></script>
+    <script>
+        let taskController = new TaskController();
+        taskController.newTask('study','dsafadsffafdf',false);
+        taskController.newTask('shower','sddsdsd',true);
+        
+        console.log(taskController.getTasks());
+    </script>
 </body>
 
 </html>
