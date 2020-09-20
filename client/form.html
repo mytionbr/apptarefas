@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks form</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/form.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <title>To-do list</title>
 </head>
-
 <body>
-
     <header class="navbar">
         <div class="container-navbar">
             <div class="logo">
@@ -21,35 +19,25 @@
             </div>
             <div class="menu">
                 <button>
-                    <a href="/form"> add task</a>
+                    <a href="/"> Home</a>
                 </button>
             </div>
         </div>
     </header>
+
     <main>
         <div class="general-container">
-           
-                <div class="wrap-table">
-                    <div class="table">
-                        <table >
-                            <thead class="table-header">
-                                <tr class='row'>
-                                    <th class='cell'>Title</th>
-                                    <th class='cell'>Done</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class='row'>
-                                    <td class='cell'><a href="http://">N/a</a></td>
-                                    <td class='cell'> <input class ='checkmark'type="checkbox"></td>
-                                                                      
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="main-container">
+                <div class="wrap-form">
+                    <h1 class="title">Add the task</h1>
+                    <form action="" class="form">
+                        <input type="text" name="title" placeholder="Insert title">
+                        <button class="buttonForm" type="submit">
+                            Submit
+                        </button>
+                    </form>
                 </div>
-            
+            </div>
         </div>
     </main>
     <script src="js/app/controllers/TaskController.js"></script>
@@ -60,5 +48,4 @@
         let taskController = new TaskController();
     </script>
 </body>
-
 </html>
