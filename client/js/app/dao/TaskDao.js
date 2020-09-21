@@ -20,4 +20,32 @@ class TaskDao {
         
         })
     }
+
+    listAll(){
+        return new Promise((resolve,reject)=>{
+            let cursor = this._connection
+                        .transaction([this._store],"readwrite")
+                        .objectStore(this._store)
+                        .openCursor()
+
+            let tasks = []
+
+            cursor.onsuccess = e =>{
+                let current = e.target.result
+
+                if(current){
+                    let data = current.value
+                    tasks.push(new Task(data.title))
+                    current.continue()
+                }else{
+                   resolve(tasks)
+                }
+            }
+
+            cursor.onerror = e =>{
+                reject('Could not list negotiations')
+                throw new Error(e.target.error)
+            }
+        })
+    }
 }

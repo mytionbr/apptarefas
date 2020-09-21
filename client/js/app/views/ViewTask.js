@@ -13,19 +13,19 @@ class ViewTask{
             </tr>
         </thead>
         <tbody>
-            <tr class='row'>
+           
                ${
-                    model.list.map(element=>{
-                        return `
+                    model.list.map(element=>`
+                    <tr class='row'>
                          <td class='cell'><a href="http://">
                             ${element.title}
                          </a></td>
-                         <td class='cell'> <input class ='checkmark'type="checkbox"></td>`
-                         
-                    }).join('')
+                         <td class='cell'> <input class ='checkmark'type="checkbox"></td>
+                    </tr>    
+                    `).join('')
                 }
                
-            </tr>
+            
         
     </tbody>
     </table>
