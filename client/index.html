@@ -31,21 +31,8 @@
            
                 <div class="wrap-table">
                     <div class="table">
-                        <table >
-                            <thead class="table-header">
-                                <tr class='row'>
-                                    <th class='cell'>Title</th>
-                                    <th class='cell'>Done</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class='row'>
-                                    <td class='cell'><a href="http://">N/a</a></td>
-                                    <td class='cell'> <input class ='checkmark'type="checkbox"></td>
-                                                                      
-                                </tr>
-                                
-                            </tbody>
+                        <div id="tableView"></div>
+                           
                         </table>
                     </div>
                 </div>
@@ -56,6 +43,8 @@
     <script src="js/app/helpers/IDManager.js"></script>
     <script src="js/app/models/Task.js"></script>
     <script src="js/app/models/TaskList.js"></script>
+    <script src="js/app/views/ViewTask.js"></script>
+    
     <script>
         let taskController = new TaskController();
     </script>

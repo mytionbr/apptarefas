@@ -1,10 +1,10 @@
 class Task{
-    constructor(id,title, description,done){
+    constructor(id,title){
        
         this._id = id;
         this._title = title;
-        this._done =  done;
-        this._description = description;
+        this._done =  false;
+        this._description = "";
         
     }
 
