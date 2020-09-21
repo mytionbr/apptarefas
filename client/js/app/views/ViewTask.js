@@ -19,14 +19,16 @@ class ViewTask{
                         return `
                          <td class='cell'><a href="http://">
                             ${element.title}
-                         </a></td>`
+                         </a></td>
+                         <td class='cell'> <input class ='checkmark'type="checkbox"></td>`
+                         
                     }).join('')
                 }
-                <td class='cell'> <input class ='checkmark'type="checkbox"></td>
+               
             </tr>
         
     </tbody>
-    </table>s
+    </table>
         `
     }
 
