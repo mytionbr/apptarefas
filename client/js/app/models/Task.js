@@ -1,18 +1,10 @@
 class Task{
-    constructor(id,title){
+    constructor(title){
        
-        this._id = id;
         this._title = title;
         this._done =  false;
         this._description = "";
         
-    }
-
-    get id(){
-        return this._id;
-    }
-    set id(id){
-        this._id = id;
     }
     get title(){
         return this._title;
