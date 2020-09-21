@@ -1,5 +1,5 @@
-var connectionFactory = (function () {
-    const stores = ['task'];
+
+    const stores = ['tasks'];
     const version = 1;
     const dbname = 'todolist'
    
@@ -35,7 +35,7 @@ var connectionFactory = (function () {
         }
         static _createStores(connection) {
             stores.forEach(store => {
-                if (connection.objectStoreNames.contains(store))
+                if (connection.objectStoreNames.contains(store)) connection.deleteObjectStore(store)
                     connection.createObjectStore(store, { autoIncrement: true })
             })
         }
@@ -47,4 +47,3 @@ var connectionFactory = (function () {
             }
         }
     }
-})()
