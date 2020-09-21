@@ -19,7 +19,7 @@ class ViewTask{
                     <tr class='row'>
                          <td class='cell'><a href="http://">
                             ${element.title}
-                         </a></td>
+                            </a></td>
                          <td class='cell'> <input class ='checkmark'type="checkbox"></td>
                     </tr>    
                     `).join('')

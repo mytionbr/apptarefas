@@ -14,7 +14,7 @@ class FormController{
         ConnectionFactory
             .getConnection()
             .then(connection =>{
-                let task = new Task(this._title);
+                let task = new Task(this._title)
                 new TaskDao(connection)
                     .add(task)
                     .then( ()=>{

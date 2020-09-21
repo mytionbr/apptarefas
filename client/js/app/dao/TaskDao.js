@@ -35,7 +35,12 @@ class TaskDao {
 
                 if(current){
                     let data = current.value
-                    tasks.push(new Task(data.title))
+                  
+                    let task = new Task(data._title)
+                    task.done = data._done
+                    task.description = data._description
+                  
+                    tasks.push(task)
                     current.continue()
                 }else{
                    resolve(tasks)
@@ -44,7 +49,7 @@ class TaskDao {
 
             cursor.onerror = e =>{
                 reject('Could not list negotiations')
-                throw new Error(e.target.error)
+               
             }
         })
     }
