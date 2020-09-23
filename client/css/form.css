@@ -1,9 +1,11 @@
+
 .wrap-form{
     width: 668px;
     background: white;
     overflow: hidden;
     padding: 50px 62px 80px 60px;
     border-radius: 10px;
+    
 }
 .form{
     width: 100%;
