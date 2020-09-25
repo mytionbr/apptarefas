@@ -1,0 +1,159 @@
+.general-container{
+    flex-direction: column;
+}
+.header-whap{
+    width: 668px;
+    background: white;
+    padding: 20px 62px 30px 60px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+}
+.header-row{
+    display: flex;  
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+.header-row button{
+    height: 60px;
+    width: 100px;
+    background-color: #ce1913;
+    color: white;
+    border: none;
+    font-size: 25px;
+}
+.wrap-form{
+    width: 668px;
+    background: white;
+    overflow: hidden;
+    padding: 50px 62px 80px 60px;
+    border-radius: 10px;
+    
+}
+.form{
+    width: 100%;
+}
+.title{
+    font-size: 35px;
+    color: #333333;
+    line-height: 1.2;
+    padding-bottom: 30px;
+}
+.form input{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 80px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 1.2;
+    transition: all 0.5s;
+}
+.form textarea{
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    transition: all 0.5s;
+    resize: none;
+}
+.form textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid #8245BF;
+    outline: 0;
+}
+.form input:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid #8245BF;
+    outline: 0;
+}
+.buttonForm{
+    background-color: #6F04D9;
+    color: #ffffff;
+    font-size: 20px;
+    border: 0 none;
+    padding: 0 20px;
+    width: 200px;
+    height: 70px;
+}
+.buttonForm:focus{
+    box-shadow: 0 0 0 0;
+    border: 1px solid #05F29B;
+    outline: 0;
+}
+.form label{
+    font-size: 25px;
+    line-height:2;
+    color:#333333;
+   
+}
+
+.wrap-table{
+    width: 790px;
+    margin: 0;
+    border-radius:10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.table{
+    width: 100%;
+    margin: 0;
+}
+table{
+    width: 100%;
+}
+
+.table-header{
+    background-color: #8245BF;
+}
+.row{
+    width: 100%;
+    line-height: 1.2;
+}
+.cell{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.cell:nth-child(1){
+    width: 600px;
+}
+.cell:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+thead .cell{
+     color: #ffffff;
+     font-size: 25px;  
+}
+tbody .row{
+    background-color: #ffffff;
+    color: #666666;
+    transition: all 1s;
+}
+tbody .cell{
+    font-size: 25px;
+    padding-left: 10px;  
+   
+}
+.checkmark{
+    width: 25px;
+    height: 25px;
+}
+tbody .cell a{
+    text-decoration: none;
+    color: #666666;
+}
+tbody .cell a:hover{
+    text-decoration: none;
+    color: #6F04D9;
+    text-decoration: underline;
+    font-weight: bold;
+}
+tbody .row:hover{
+    background-color: #dad4d4;
+}
