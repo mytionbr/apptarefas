@@ -39,7 +39,8 @@ class TaskDao {
                     let task = new Task(data._title)
                     task.done = data._done
                     task.description = data._description
-                  
+                    task.id = data._id
+                   
                     tasks.push(task)
                     current.continue()
                 }else{
@@ -52,5 +53,31 @@ class TaskDao {
                
             }
         })
+    }
+    getTaskById(id){
+        return new Promise((resolve,reject) =>{
+            let dbOpenRequest = this._connection
+                                        .transaction([this._store],"readonly")
+                                        .objectStore(this._store)
+            let request = dbOpenRequest.get(id);
+            request.onerror = (error) => {
+                console.log("Error", error.target)
+            }
+            request.onsuccess = (event) =>{
+                let element = event.target.result
+                if(element!==undefined){
+                    console.log('Elemtent with id = ' + id + ' was found\n' + JSON.stringify(element));
+                }
+                else{
+                    console.log('Element with id = ' + id + ' does not exist in the IndexedDB ');
+                    resolve(element)
+                }
+           }
+            
+                                        
+
+        })
+
+        
     }
 }

@@ -4,7 +4,7 @@ class Task{
         this._title = title;
         this._done =  false;
         this._description = "";
-        
+        this._id;
     }
     get title(){
         return this._title;
@@ -26,5 +26,11 @@ class Task{
         this._description = description;
     }
     
+    get id(){
+        return this._id
+    }
+    set id(id){
+        this._id = id
+    }
   
 }

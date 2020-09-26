@@ -10,11 +10,15 @@ class HomeController{
             .then(connection => new TaskDao(connection))
             .then(dao => dao.listAll())
             .then(tasks =>{
-                tasks.forEach(task =>{
+                 tasks.forEach(task =>{
                     console.log(task)
                     this._taskList.addTask(task)})
                     this._viewTask.update(this._taskList)})
                           
+    }
+
+    getTaskByID(id){
+        
     }
    
 }
