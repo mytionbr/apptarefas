@@ -3,8 +3,8 @@ class HomeController{
        
        let $ = document.querySelector.bind(document)
         this._taskList = new TaskList();
-        this._viewTask = new ViewTask($('#tableView'));
-        this._viewTask.update(this._taskList);
+        this._taskView = new TaskView($('#tableView'));
+        this._taskView.update(this._taskList);
         ConnectionFactory
             .getConnection()
             .then(connection => new TaskDao(connection))
@@ -13,7 +13,7 @@ class HomeController{
                  tasks.forEach(task =>{
                     console.log(task)
                     this._taskList.addTask(task)})
-                    this._viewTask.update(this._taskList)})
+                    this._taskView.update(this._taskList)})
                           
     }
 

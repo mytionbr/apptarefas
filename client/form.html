@@ -32,6 +32,7 @@
                 <div class="wrap-form">
                     <h1 class="title">Add the task</h1>
                     <form action="" class="form">
+                        <span id="message"></span>
                         <input  type="text" name="title" placeholder="Insert title">
                         <button class="buttonForm" type="submit">
                             Submit
@@ -46,6 +47,7 @@
     <script src="js/app/models/TaskList.js"></script>
     <script src="js/app/services/ConnectionFactory.js"></script>
     <script src="js/app/dao/TaskDao.js"></script>
+    <script src="js/app/views/FormView.js"></script>
     <script>
         let formController = new FormController();
     </script>

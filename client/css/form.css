@@ -47,3 +47,16 @@
     border: 1px solid #05F29B;
     outline: 0;
 }
+.message-form-successu, .message-form-flawed{
+    color:white;
+    font-size: 25px;
+    line-height: 1.2;
+    padding: 10px 2px;
+    margin: 10px 0;
+}
+.message-form-successu{
+    background-color: green;
+}
+.message-form-flawed{
+    background-color: red;
+}

@@ -1,4 +1,4 @@
-class ViewTask{
+class TaskView{
     constructor(model){
         this.element = model;
     }
@@ -17,7 +17,7 @@ class ViewTask{
                ${
                     model.list.map(element=>`
                     <tr class='row'>
-                         <td class='cell'><a href="http://">
+                         <td class='cell' id_task="${element.id}"><a href="http://" >
                             ${element.title}
                             </a></td>
                          <td class='cell'> <input class ='checkmark'type="checkbox"></td>
