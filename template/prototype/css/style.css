@@ -1,0 +1,50 @@
+:root
+{
+    --header-heigth: 3rem;
+    --navbar-width:350px;
+
+    --bg-header: #120426;
+    --bg-navbar:#4946A6;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: flex;
+}
+.header
+{
+    background-color: var(--bg-header);
+    height: 5rem;
+    width: 100%;
+}
+
+.navBar
+{
+    height: 100vh;
+    width: var(--navbar-width);
+    background-color: var(--bg-navbar);
+}
+
+.container-navBar-header
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: var( --header-heigth);
+    color: #ffffff;
+}
+
+.container-main
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
