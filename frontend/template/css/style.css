@@ -1,0 +1,36 @@
+:root{
+    --bg-purple: #340241;
+    --bg-yello: #EBE700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-purple);
+    padding: 20px;
+    width: 100%;
+    height: 3.5rem;
+}
+
+.left_area h3{
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+}
+.left_area span{
+    color: var(--bg-yello);
+}
