@@ -16,7 +16,7 @@ const TaskSchema = new mongoose.Schema({
         type: String,
         default: "Not done"
     },
-    categoria: {
+    category: {
         type: String
     }
 })

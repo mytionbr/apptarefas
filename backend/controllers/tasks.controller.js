@@ -14,10 +14,31 @@ module.exports = {
     
     },
     create: (req, res) => {
-        let task = req.body
-    
-        tasks.push(task)
-        res.json(task)
+        // Validando se o usuário enviou o titulo
+        if(!req.body.title){
+            return res.status(400).json(
+                {message: "it was not possible to create a task due to lack of title"}
+            )
+        }
+
+        // Criando o objeto task
+
+        const task = new Task({
+            title: req.body.title,
+            description: req.body.description,
+            date: req.body.date,
+            status: req.body.status,
+            category: req.body.category
+        }) 
+        
+        //salvando o objeto task no db
+        task.save()
+        .then(task => res.json(task))
+        .catch(err => {
+            res.status(500).json(
+                {message: `Some error occurred: ${err.message}`}
+            )
+        })
     },
     update: (req, res) => {
         let id = Number(req.params.id)
