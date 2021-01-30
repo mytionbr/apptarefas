@@ -15,12 +15,26 @@ module.exports = {
             )
     },
     findOne: (req, res) => {
-        let id = Number(req.params.id)
-
-        let task = tasks.find(task => task._id === id)
-        console.log(task)
-        if (task) res.json(task)
-        else res.json({ message: "object not found" })
+        let id = req.params.taskId
+        Task.findById(id)
+        .then(task=>{
+            if(!task){
+                return res.status(404).json({
+                    message: `Task not found with ${id}`
+                })
+            }
+            res.json(task)
+        })
+        .catch(err =>{
+            if(err.kind === "ObjectId"){
+                return res.status(404).json(
+                    {message: `Task not found with ${id}`}
+                )
+            }
+            return res.status(500).json({
+                message: `Some error occurred: ${err.message}` 
+            })
+        })
 
     },
     create: (req, res) => {

@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/', taskController.findAll)
 
-router.get('/:id', taskController.findOne)
+router.get('/:taskId', taskController.findOne)
 
 router.post('/', taskController.create)
 
