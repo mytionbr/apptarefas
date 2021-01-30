@@ -11,7 +11,7 @@ router.post('/', taskController.create)
 
 router.put('/:taskId', taskController.update)
 
-router.delete("/:id",taskController.delete)
+router.delete("/:taskId",taskController.delete)
 
 
 

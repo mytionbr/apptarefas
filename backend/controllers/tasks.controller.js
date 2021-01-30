@@ -100,20 +100,29 @@ module.exports = {
     },
 
     delete: (req, res) => {
-        let id = Number(req.params.id)
-        let index
-        let task = tasks.find((task, i) => {
-            index = i
-            return task._id === id
-        })
-        console.log(index)
-        if (task) {
-            tasks.splice(index, 1)
-            res.json(tasks)
-        }
-        else {
-            res.json({ message: 'Object not found' })
-        }
+        Task.findByIdAndDelete(req.params.taskId)
+            .then(task => {
+                if (!task) {
+                    return res.status(404).json(
+                        { message: `Task not found with ${req.params.taskId}` }
+                    )
+                }
+                res.json({ message: "task successfully deleted" })
+
+            }
+            )
+            .catch(err => {
+                if (err.kind === 'ObjectId' || err.name === 'NotFound') {
+                    return res.status(404).json(
+                        { message: `Task not found with ${req.params.taskId}` }
+                    )
+                }
+                return res.status(500).json(
+                    { message: `Some error occurred: ${err.message}` }
+                )
+            }
+            )
     }
+
 
 }
