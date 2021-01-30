@@ -17,24 +17,24 @@ module.exports = {
     findOne: (req, res) => {
         let id = req.params.taskId
         Task.findById(id)
-        .then(task=>{
-            if(!task){
-                return res.status(404).json({
-                    message: `Task not found with ${id}`
-                })
-            }
-            res.json(task)
-        })
-        .catch(err =>{
-            if(err.kind === "ObjectId"){
-                return res.status(404).json(
-                    {message: `Task not found with ${id}`}
-                )
-            }
-            return res.status(500).json({
-                message: `Some error occurred: ${err.message}` 
+            .then(task => {
+                if (!task) {
+                    return res.status(404).json({
+                        message: `Task not found with ${id}`
+                    })
+                }
+                res.json(task)
             })
-        })
+            .catch(err => {
+                if (err.kind === "ObjectId") {
+                    return res.status(404).json(
+                        { message: `Task not found with ${id}` }
+                    )
+                }
+                return res.status(500).json({
+                    message: `Some error occurred: ${err.message}`
+                })
+            })
 
     },
     create: (req, res) => {
@@ -66,22 +66,37 @@ module.exports = {
     },
 
     update: (req, res) => {
-        let id = Number(req.params.id)
-        let taskUpdade = { ...req.body }
-        let index
-        let task = tasks.find((task, i) => {
-            index = i
-            return task._id === id
-        })
+        if (!req.body.title) {
+            return res.status(400).json(
+                { message: 'Title can not be empty' }
+            )
+        }
+        Task.findByIdAndUpdate(req.params.taskId, {
+            title: req.body.title,
+            description: req.body.description,
+            date: req.body.date,
+            status: req.body.status,
+            category: req.body.category
 
-        if (task) {
-            task = taskUpdade
-            tasks[index] = task
-            res.json(task)
-        }
-        else {
-            res.json({ message: 'Object not found' })
-        }
+        })
+            .then(task => {
+                if (!task) {
+                    return res.status(404).json(
+                        { message: `Task not found with ${req.params.taskId}` }
+                    )
+                }
+                res.json(task)
+            })
+            .catch(err => {
+                if (err.kind === 'ObjectId') {
+                    return res.status(404).json(
+                        { message: `Task not found with ${req.params.taskId}` }
+                    )
+                }
+                return res.status(500).json(
+                    { message: `Some error occurred: ${err.message}` }
+                )
+            })
     },
 
     delete: (req, res) => {
