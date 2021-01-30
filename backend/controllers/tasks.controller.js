@@ -1,22 +1,4 @@
-
-let tasks = [
-    {
-        "_id": 1,
-        "title": "Afazeres",
-        "description": "ssdfsdf",
-        "date": "10/01/2021",
-        "status": "done",
-        "categoria": "school"
-    },
-    {
-        "_id": 2,
-        "title": "Realizar trabalho da faculdade",
-        "description": "ssdfsdf",
-        "date": "10/01/2021",
-        "status": "done",
-        "categoria": "school"
-    }
-]
+const Task = require('./../models/task.model')
 
 module.exports = {
     findAll: (req, res) => {
