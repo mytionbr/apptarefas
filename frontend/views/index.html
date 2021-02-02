@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Tasks</title>
+</head>
+<body>
+
+    
+    <form action="POST" id="formTasks">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description">
+        <label for="category">Category</label>
+        <input type="text" name="category" id="category">
+        <input type="submit" value="Enviar">
+        
+    </form>
+
+    <div class="filter">
+        <form action="POST" id="formGetTask">
+            <label for="id">Id</label>
+            <input type="text" name="id" id="id">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <ul class="lista"></ul>
+
+    <script src="./getTasks.js"></script>
+    <script src="./postTasks.js"></script>
+    <script src="./findTask.js"></script>
+    <script src="./main.js"></script>
+    
+ 
+
+</body>
+</html>
