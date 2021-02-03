@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Tasks</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css"
+        integrity="sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw=="
+        crossorigin="anonymous" />
 </head>
+
 <body>
+    <!-- começo do header -->
+    <header>
+        <div class="logo">
+            <h3> App <span>Taks</span></h3>
+        </div>
+        <a href="#" class="logout_btn">Logout</a>
 
-    
-    <form action="POST" id="formTasks">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title">
-        <label for="description">Description</label>
-        <input type="text" name="description" id="description">
-        <label for="category">Category</label>
-        <input type="text" name="category" id="category">
-        <input type="submit" value="Enviar">
+    </header>
+    <!-- fim do header -->
+
+    <!-- Sidebar start-->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="user">
+                <img src="./images/user.png" alt="profil">
+                <h4>User</h4>
+            </div>
+            <div class="btn-close">
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+
+        <div class="container-links">
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+
+
+        </div>
+
+
+
+    </aside>
+    <!-- Sidebar end-->
+    <main></main>
+    <footer></footer>
+
+    <script src="public/js/logic/createTask.js"></script>
+    <script src="public/js/logic/deleteTasks.js"></script>
+    <script src="public/js/logic/findTask.js"></script>
+    <script src="public/js/logic/getTasks.js"></script>
+    <script src="public/js/logic/postTasks.js"></script>
+    <script src="public/js/logic/updateTask.js"></script>
+    <script src="public/js/logic/interface.js"></script>
+    <script src="public/js/events/eventTasksLinsks.js"></script>
+    <script>
+
         
-    </form>
 
-    <div class="filter">
-        <form action="POST" id="formGetTask">
-            <label for="id">Id</label>
-            <input type="text" name="id" id="id">
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
-
-    <ul class="lista"></ul>
-
-    <script src="./getTasks.js"></script>
-    <script src="./postTasks.js"></script>
-    <script src="./findTask.js"></script>
-    <script src="./main.js"></script>
-    
- 
-
+    </script>
 </body>
+
 </html>
