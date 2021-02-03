@@ -17,9 +17,9 @@
     <header>
         <div class="logo">
             <h3> App <span>Taks</span></h3>
-        </div>        
+        </div>
         <a href="#" class="logout_btn">Logout</a>
-        
+
     </header>
     <!-- fim do header -->
 
@@ -34,18 +34,66 @@
                 <a href="#"><i class="fas fa-bars"></i></a>
             </div>
         </div>
-       
+
         <div class="container-links">
-            <a href="#"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
-            <a href="#"><i class="fas fa-desktop"></i><span>Estudos</span></a>
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+            <div class="list-tasks-links">
+                <a href="#" class="task-category-link"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+                <a href="#" class="task-link none"><i class="fas fa-desktop"></i><span>Trabalho</span></a>
+            </div>
+
+
         </div>
-       
-        
+
+
 
     </aside>
     <!-- Sidebar end-->
     <main></main>
     <footer></footer>
+
+    <script>
+
+        eventTasksLinsks()
+
+        function eventTasksLinsks() {
+            let taskCategoryLink = document.querySelectorAll(".task-category-link")
+            taskCategoryLink.forEach((element) => {
+                element.addEventListener('click', (evet) => {
+                    evet.preventDefault()
+                    let div = evet.target.parentNode.parentNode
+                    let listTasksLinks = div.querySelectorAll('.task-link')
+                    console.log(listTasksLinks)
+                    listTasksLinks.forEach((element) => {
+                        if (element.classList.contains('none')) {
+                            element.classList.remove('none')
+                        }
+                        else {
+                            element.classList.add('none')
+                        }
+
+                    })
+                })
+            })
+        }
+
+    </script>
 </body>
 
 </html>

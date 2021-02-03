@@ -85,6 +85,41 @@ header{
     color: var(--cl-grey);
     font-weight: 700;
 }
+.container-links{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.list-tasks-links{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.none{
+    display: none;
+}
+
+.task-category-link{
+    margin: 10px 0;
+    
+}
+.task-category-link, .task-link{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.task-category-link:hover, .task-link:hover{
+    text-decoration: underline;
+}
+
+.task-category-link span, .task-link span{
+    margin-left: 15px;
+}
+.task-link {
+    margin-left: 20px;
+}
 
 main{
     grid-area: main;
